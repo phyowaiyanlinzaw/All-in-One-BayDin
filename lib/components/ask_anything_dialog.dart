@@ -25,7 +25,7 @@ class _AskAnythingDialogState extends State<AskAnythingDialog> {
                 onPressed: () {
                   Navigator.pop(context);
                 },
-                child: Text('Lee Button'))
+                child: Text('Ok'))
           ],
         ),
       ),
