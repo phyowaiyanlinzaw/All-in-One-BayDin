@@ -1,14 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:know_my_zodiac_sign/utilities/constants.dart';
-import 'package:know_my_zodiac_sign/services/answers_randomizer.dart';
 
-// ignore: use_key_in_widget_constructors
-class AskAnythingDialog extends StatefulWidget {
+class LoveCalculatorDialog extends StatefulWidget {
+  final String result;
+
+  // ignore: use_key_in_widget_constructors
+  const LoveCalculatorDialog({required this.result});
+
   @override
-  State<AskAnythingDialog> createState() => _AskAnythingDialogState();
+  State<LoveCalculatorDialog> createState() => _LoveCalculatorDialogState();
 }
 
-class _AskAnythingDialogState extends State<AskAnythingDialog> {
+class _LoveCalculatorDialogState extends State<LoveCalculatorDialog> {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
@@ -19,7 +22,7 @@ class _AskAnythingDialogState extends State<AskAnythingDialog> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            Text(AnswerRandomizer().answerRandomizer()),
+            Text("${widget.result}%"),
             ElevatedButton(
                 style:
                     ElevatedButton.styleFrom(backgroundColor: kSecondaryColor),

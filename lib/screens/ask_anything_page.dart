@@ -36,8 +36,12 @@ class _AskAnythingPageState extends State<AskAnythingPage> {
                 await showDialog(
                     context: context, builder: (_) => AskAnythingDialog());
               },
-              child: Image.asset(
-                'images/8ball.png',
+              child: SizedBox(
+                height: 100,
+                width: 100,
+                child: Image.asset(
+                  'images/8ball.png',
+                ),
               ),
             )
           ],

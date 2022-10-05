@@ -62,7 +62,7 @@ class _UserInfoPageState extends State<UserInfoPage> {
                       backgroundColor: kPrimaryColor,
                       shape: const StadiumBorder()),
                   onPressed: () {
-                    if (selectedDate != null) {
+                    if (selectedDate != null && userName != null) {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
@@ -70,7 +70,10 @@ class _UserInfoPageState extends State<UserInfoPage> {
                                   ScreenChooserPage(selectedDate!, userName)));
                     } else {
                       ScaffoldMessenger.of(context).showSnackBar(
-                          SnackBar(content: Text('Birthday can\'t be empty')));
+                        const SnackBar(
+                          content: Text('User Infos can\'t be empty'),
+                        ),
+                      );
                     }
                   },
                   child: kTextOnLogInButton),

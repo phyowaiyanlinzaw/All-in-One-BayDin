@@ -5,6 +5,7 @@ import 'package:know_my_zodiac_sign/components/card_content.dart';
 import 'package:know_my_zodiac_sign/screens/zodiac_reading_page.dart';
 import 'package:know_my_zodiac_sign/screens/personal_type_page.dart';
 import 'package:know_my_zodiac_sign/screens/ask_anything_page.dart';
+import 'package:know_my_zodiac_sign/screens/love_calculator_page.dart';
 
 class ScreenChooserPage extends StatelessWidget {
   final String selectedDate;
@@ -66,12 +67,20 @@ class ScreenChooserPage extends StatelessWidget {
                 children: [
                   Expanded(
                     child: ReusableCard(
-                        onPress: () {},
-                        color: kCardColor,
-                        cardChild: CardContent(
-                          image: 'images/love.png',
-                          text: 'LOVE CALCULATOR',
-                        )),
+                      onPress: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (_) => LoveCalculatorPage(),
+                          ),
+                        );
+                      },
+                      color: kCardColor,
+                      cardChild: CardContent(
+                        image: 'images/love.png',
+                        text: 'LOVE CALCULATOR',
+                      ),
+                    ),
                   ),
                   Expanded(
                     child: ReusableCard(
