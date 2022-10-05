@@ -40,16 +40,17 @@ class _LoveCalculatorPageState extends State<LoveCalculatorPage> {
             ),
             GestureDetector(
               onTap: () {
-                firstPersonName == null && secondPersonName == null
-                    ? ScaffoldMessenger.of(context).showSnackBar(
-                        const SnackBar(
-                          content: Text('Names can\'t be empty'),
-                        ),
-                      )
-                    : showDialog(
+                (firstPersonName?.isNotEmpty ?? false) &&
+                        (secondPersonName?.isNotEmpty ?? false)
+                    ? showDialog(
                         context: context,
                         builder: (_) => LoveCalculatorDialog(
                           result: getLoveCalculationResult(),
+                        ),
+                      )
+                    : ScaffoldMessenger.of(context).showSnackBar(
+                        const SnackBar(
+                          content: Text('Names can\'t be empty'),
                         ),
                       );
               },

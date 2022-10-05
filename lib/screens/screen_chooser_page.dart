@@ -3,11 +3,12 @@ import 'package:know_my_zodiac_sign/components/reusable_card.dart';
 import 'package:know_my_zodiac_sign/utilities/constants.dart';
 import 'package:know_my_zodiac_sign/components/card_content.dart';
 import 'package:know_my_zodiac_sign/screens/zodiac_reading_page.dart';
-import 'package:know_my_zodiac_sign/screens/personal_type_page.dart';
+import 'package:know_my_zodiac_sign/screens/person_type_page.dart';
 import 'package:know_my_zodiac_sign/screens/ask_anything_page.dart';
 import 'package:know_my_zodiac_sign/screens/love_calculator_page.dart';
 
 class ScreenChooserPage extends StatelessWidget {
+
   final String selectedDate;
   final String? userName;
 
@@ -52,7 +53,7 @@ class ScreenChooserPage extends StatelessWidget {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (builder) => PersonalTypePage()));
+                                builder: (builder) => PersonTypePage()));
                       },
                       color: kCardColor,
                       cardChild: CardContent(

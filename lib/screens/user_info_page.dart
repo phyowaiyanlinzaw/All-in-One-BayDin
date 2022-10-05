@@ -62,7 +62,8 @@ class _UserInfoPageState extends State<UserInfoPage> {
                       backgroundColor: kPrimaryColor,
                       shape: const StadiumBorder()),
                   onPressed: () {
-                    if (selectedDate != null && userName != null) {
+                    if (selectedDate != null &&
+                        (userName?.isNotEmpty ?? false)) {
                       Navigator.push(
                           context,
                           MaterialPageRoute(

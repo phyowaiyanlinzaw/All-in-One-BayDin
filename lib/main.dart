@@ -1,4 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:know_my_zodiac_sign/components/ask_anything_dialog.dart';
+import 'package:know_my_zodiac_sign/screens/ask_anything_page.dart';
+import 'package:know_my_zodiac_sign/screens/love_calculator_page.dart';
+import 'package:know_my_zodiac_sign/screens/person_type_page.dart';
+import 'package:know_my_zodiac_sign/screens/screen_chooser_page.dart';
+import 'package:know_my_zodiac_sign/services/love_calculator.dart';
 import 'utilities/constants.dart';
 import 'screens/user_info_page.dart';
 
@@ -18,6 +24,8 @@ class KnowYourZodiac extends StatelessWidget {
             scaffoldBackgroundColor: kPrimaryColor,
             textTheme: kTextTheme),
         debugShowCheckedModeBanner: false,
-        home: UserInfoPage());
+        home: UserInfoPage(),	
+		);
+
   }
 }

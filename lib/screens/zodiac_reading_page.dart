@@ -7,6 +7,7 @@ import 'package:know_my_zodiac_sign/utilities/constants.dart';
 import 'package:flutter/services.dart';
 
 class ZodiacReadingPage extends StatefulWidget {
+
   final String selectedDate;
 
   ZodiacReadingPage(this.selectedDate);

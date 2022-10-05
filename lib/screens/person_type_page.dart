@@ -6,12 +6,13 @@ import 'package:know_my_zodiac_sign/services/person_type_analyzer.dart';
 import 'package:know_my_zodiac_sign/utilities/constants.dart';
 import 'package:know_my_zodiac_sign/components/image_dialog.dart';
 
-class PersonalTypePage extends StatefulWidget {
+class PersonTypePage extends StatefulWidget {
+	
   @override
-  State<PersonalTypePage> createState() => _PersonalTypePageState();
+  State<PersonTypePage> createState() => _PersonTypePageState();
 }
 
-class _PersonalTypePageState extends State<PersonalTypePage> {
+class _PersonTypePageState extends State<PersonTypePage> {
   String? userBurmeseInitials;
 
   String getPersonType(String inputName) {
