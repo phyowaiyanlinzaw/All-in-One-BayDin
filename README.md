@@ -1,16 +1,27 @@
-# know_my_zodiac_sign
+# All-1N-One BAYDIN
 
-A new Flutter project.
+You can find some baydins that you might need in this app.
 
-## Getting Started
+- https://tinyurl.com/4mj447u7
 
-This project is a starting point for a Flutter application.
+## Home Screen
 
-A few resources to get you started if this is your first Flutter project:
+<img src="screenshots/homescreen.png" alt="homescreen" width="200"/>
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## BayDins Page
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<img src="screenshots/screenchooser.png" alt="mainpage" width="200"/>
+
+## Zodiac Page
+
+<img src="screenshots/zodiac.png" alt="zodiac" width="200"/>
+
+## Person Type Page
+
+<img src="screenshots/nameinput.png" alt="input" width="200"/>
+<img src="screenshots/type.png" alt="typeresult" width="200"/>
+
+## Ask Me Anything Page
+
+<img src="screenshots/8ball.png" alt="8ball" width="200"/>
+<img src="screenshots/result.png" alt="result" width="200"/>
