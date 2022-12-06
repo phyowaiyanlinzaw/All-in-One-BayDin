@@ -31,6 +31,16 @@ const kLogInLogoText = Text(
       fontSize: 40),
 );
 
+const kErrorInitializeText = Text(
+  'Something went wrong.',
+  style: TextStyle(
+      color: Colors.red,
+      fontWeight: FontWeight.w900,
+      fontStyle: FontStyle.italic,
+      fontFamily: 'Open Sans',
+      fontSize: 40),
+);
+
 const kTextOnDateButton = Text(
   'Click to select your birthday',
   style: TextStyle(color: Color(0xFF191919)),

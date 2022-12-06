@@ -1,3 +1,5 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:know_my_zodiac_sign/services/zodiac_analyzer.dart';
@@ -5,30 +7,41 @@ import 'package:know_my_zodiac_sign/components/zodiac_reading_card.dart';
 import 'package:know_my_zodiac_sign/components/card_content.dart';
 import 'package:know_my_zodiac_sign/utilities/constants.dart';
 import 'package:flutter/services.dart';
+import 'package:uuid/uuid.dart';
 
 class ZodiacReadingPage extends StatefulWidget {
-
-  final String selectedDate;
-
-  ZodiacReadingPage(this.selectedDate);
 
   @override
   State<ZodiacReadingPage> createState() => _ZodiacReadingPageState();
 }
 
 class _ZodiacReadingPageState extends State<ZodiacReadingPage> {
+
+  final FirebaseAuth _auth = FirebaseAuth.instance;
+
+  dynamic data;
+  DocumentSnapshot? snapshot;
+
+  String? selectedDate;
+
   String? zodiacName;
   String? zodiacReading;
 
-  void getZodiacSign() {
-    zodiacName = ZodiacAnalyzer().analyzeDate(widget.selectedDate)[0];
-    zodiacReading = ZodiacAnalyzer().analyzeDate(widget.selectedDate)[1];
+  void getZodiac() {
+    var firebaseUser = _auth.currentUser;
+    FirebaseFirestore.instance.collection('users').doc(firebaseUser!.uid).get().then((value) {
+      setState(() {
+        selectedDate = value.data()!['birthday'];
+      });
+      zodiacName = ZodiacAnalyzer().analyzeDate(selectedDate!)[0];
+      zodiacReading = ZodiacAnalyzer().analyzeDate(selectedDate!)[1];
+    });
   }
 
   @override
   void initState() {
     super.initState();
-    getZodiacSign();
+    getZodiac();
   }
 
   @override
@@ -61,7 +74,7 @@ class _ZodiacReadingPageState extends State<ZodiacReadingPage> {
                 ),
               )
             ],
-          ),
+          )
         ),
       ),
     );
